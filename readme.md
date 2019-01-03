@@ -57,7 +57,7 @@ cnn_model.py 文件为训练和测试 TextCNN 模型的代码
 
 rcnn_model.py 文件为训练和测试 RCNN 模型的代码
 
-![Aaron Swartz](https://github.com/liyibo/text-classification-demos/tree/master/images/rcnn.jpg?raw=true)
+![Aaron Swartz](images/rcnn.jpg?raw=true)
 <center> **图1 RCNN 模型结构图** </center >
 
 [Recurrent Convolutional Neural Network for Text Classification](https://scholar.google.com.hk/scholar?q=Recurrent+Convolutional+Neural+Networks+for+Text+Classification&hl=zhCN&as_sdt=0&as_vis=1&oi=scholart&sa=X&ved=0ahUKEwjpx82cvqTUAhWHspQKHUbDBDYQgQMIITAA), 在学习 word representations 时候，同时采用了 rnn 结构来学习 word 的上下文，虽然模型名称为 RCNN，但并没有显式的存在卷积操作。
