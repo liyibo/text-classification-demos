@@ -35,7 +35,7 @@ Tensorflow 环境下,不同的神经网络模型对中文文本进行分类，�
 
 fasttext_model.py 文件为训练和测试 fasttext 模型的代码
 
-![图1 FastText 模型结构图](https://github.com/liyibo/text-classification-demos/tree/master/images/fasttext.jpg?raw=true)
+![图1 FastText 模型结构图](images/fasttext.jpg?raw=true)
 
 本代码简化了 fasttext 模型的结构，模型结构非常简单，运行速度简直飞快，模型准确率也不错，可根据实际需要优化模型结构
 
@@ -43,8 +43,7 @@ fasttext_model.py 文件为训练和测试 fasttext 模型的代码
 
 cnn_model.py 文件为训练和测试 TextCNN 模型的代码
 
-![Aaron Swartz](https://github.com/liyibo/text-classification-demos/tree/master/images/textcnn.jpg?raw=true)
-<center> **图1 TextCNN 模型结构图** </center >
+![图2 TextCNN 模型结构图](images/textcnn.jpg?raw=true)
 
 本代码实现了 TextCNN 模型的结构，通过 3 个不同大小的卷积核，对输入文本进一维卷积，分别 pooling 三个卷积之后的 feature， 拼接到一起，然后进行 dense 操作，最终输出模型结果。可实现速度和精度之间较好的折中。
 
@@ -56,7 +55,7 @@ cnn_model.py 文件为训练和测试 TextCNN 模型的代码
 
 rcnn_model.py 文件为训练和测试 RCNN 模型的代码
 
-![Aaron Swartz](images/rcnn.jpg?raw=true)
+![图3 RCNN 模型结构图](images/rcnn.jpg?raw=true)
 <center> **图1 RCNN 模型结构图** </center >
 
 [Recurrent Convolutional Neural Network for Text Classification](https://scholar.google.com.hk/scholar?q=Recurrent+Convolutional+Neural+Networks+for+Text+Classification&hl=zhCN&as_sdt=0&as_vis=1&oi=scholart&sa=X&ved=0ahUKEwjpx82cvqTUAhWHspQKHUbDBDYQgQMIITAA), 在学习 word representations 时候，同时采用了 rnn 结构来学习 word 的上下文，虽然模型名称为 RCNN，但并没有显式的存在卷积操作。
@@ -66,8 +65,7 @@ rcnn_model.py 文件为训练和测试 RCNN 模型的代码
 
 han_model.py 文件为训练和测试 HAN 模型的代码
 
-![Aaron Swartz](https://github.com/liyibo/text-classification-demos/tree/master/images/han.jpg?raw=true)
-<center> **图1 HAN 模型结构图** </center >
+![图4 HAN 模型结构图](images/han.jpg?raw=true)
 
 HAN 为 Hierarchical Attention Networks，将待分类文本，分为一定数量的句子，分别在 word level 和 sentence level 进行 encoder 和 attention 操作，从而实现对较长文本的分类。  
 
@@ -77,8 +75,7 @@ HAN 为 Hierarchical Attention Networks，将待分类文本，分为一定数�
 
 dpcnn_model.py 文件为训练和测试 DPCNN 模型的代码  
 
-![Aaron Swartz](https://github.com/liyibo/text-classification-demos/tree/master/images/dpcnn.jpg?raw=true)
-<center> **图1 DPCNN 模型结构图** </center >
+![图5 DPCNN 模型结构图](images/dpcnn.jpg?raw=true)
 
 DPCNN 通过卷积和残差连接增加了以往用于文本分类 CNN 网络的深度，可以有效提取文本中的远程关系特征，并且复杂度不高，实验表名，效果比以往的 CNN 结构要好一点。
 
@@ -93,12 +90,9 @@ bert_model.py 将训练数据和验证数据存储为 tfrecord 文件，然后�
 
 由于 bert 提供的预训练模型较大，需要自己去 [google-research/bert](https://github.com/google-research/bert) 中下载预训练好的模型，本实验采用的是 "BERT-Base, Chinese" 模型。
 
-![Aaron Swartz](https://github.com/liyibo/text-classification-demos/tree/master/images/bert_1.jpeg?raw=true)
-<center> **图6 BERT 输入数据格式** </center > 
+![图6 BERT 输入数据格式](images/bert_1.jpeg?raw=true)
 
-![Aaron Swartz](https://github.com/liyibo/text-classification-demos/tree/master/images/bert_2.jpeg?raw=true)
-<center> **图7 BERT 下游任务介绍** </center > 
-
+![图7 BERT 下游任务介绍](images/bert_2.jpeg?raw=true)
 
 ## 参考  
 
