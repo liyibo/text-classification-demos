@@ -35,8 +35,7 @@ Tensorflow 环境下,不同的神经网络模型对中文文本进行分类，�
 
 fasttext_model.py 文件为训练和测试 fasttext 模型的代码
 
-![Aaron Swartz](https://github.com/liyibo/text-classification-demos/tree/master/images/fasttext.jpg?raw=true)
-<center> **图1 FastText 模型结构图** </center >
+![图1 FastText 模型结构图](https://github.com/liyibo/text-classification-demos/tree/master/images/fasttext.jpg?raw=true)
 
 本代码简化了 fasttext 模型的结构，模型结构非常简单，运行速度简直飞快，模型准确率也不错，可根据实际需要优化模型结构
 
