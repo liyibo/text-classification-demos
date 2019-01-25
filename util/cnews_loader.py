@@ -46,7 +46,9 @@ def build_vocab(train_dir, vocab_dir, vocab_size=5000):
     all_data = []
     # 将字符串转为单个字符的list
     for content in data_train:
-        all_data.extend(content)
+        for word in content:
+            if word.strip():
+                all_data.append(word)
 
     counter = collections.Counter(all_data)
     counter_pairs = counter.most_common(vocab_size - 2)
@@ -68,6 +70,8 @@ def word_2_id(vocab_dir):
     """
     with open(vocab_dir) as f:
         words = [_.strip() for _ in f.readlines()]
+
+    word_dict = {}
     word_to_id = dict(zip(words, range(len(words))))
     id_to_word = dict((v, k) for k, v in word_to_id.items())
 
@@ -133,4 +137,3 @@ def batch_iter(x, y, batch_size=32, shuffle=True):
         start_index = i * batch_size
         end_index = min((i + 1) * batch_size, data_len)
         yield (x_shuffle[start_index:end_index], y_shuffle[start_index:end_index])
-
