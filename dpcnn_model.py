@@ -18,6 +18,9 @@ from util.cnews_loader import *
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
+"""
+TODO: the use of batch_normalization in the model is error, need to fixed
+"""
 
 class DPCNN():
     """
